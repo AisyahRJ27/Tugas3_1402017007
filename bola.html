@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>3D Calculator: Bola</title>
+
+        <!-- CSS -->
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        
+    </head>
+
+    <body style="background-color: rgb(247, 209, 160);">
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <div class="container-fluid align-items-center">
+                <a href="#" class="navbar-brand">3D Calculator</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="silinder.html">Silinder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kerucut.html">Kerucut</a></li>
+                        <li class="nav-item"><a class="nav-link" href="bola.html">Bola</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <h3 class="display-2">Bangun Ruang: Bola</h3>
+                <hr style="margin-bottom: 30pt;">
+            </div>
+        </div>
+
+        <!-- HITUNG BOLA -->
+        <section class="bola" id="bola">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <img src="image/bola.png" class="img-fluid">
+                    </div>
+
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <script src="js/function.js"></script>
+                        <h4 class="mb-3" style="color: rgb(41, 51, 53);">Menghitung Bola</h4>
+                        <form class="row g-3" action="#" method="post" >
+                            <div class="col-md-6">
+                              <label class="form-label">Masukkan Jari-Jari:</label>
+                              <input type="number" id="r" class="form-control" required="">
+                            </div>
+
+                            <div class="col-9">
+                                <button type="button" class="btn btn-secondary d-grid col-6" 
+                                        onclick="hitungBola()">Hitung Bola</button>
+                            </div>
+
+                            <!-- <h4 class="mb-3" style="color: rgb(41, 51, 53);">Hasil Perhitungan</h4>-->
+                            <p id="luas"></p>
+                            <p id="volume"></p>
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer" style="background-color: rgb(218, 218, 218);">
+            <div class="container-fluid padding">
+                <div class="row text-center">
+                    <div class="copyright md-4">
+                        <p> </p>
+                        &copy; Copyright <strong><span>3D Calculator</span></strong>
+                        : By Aisyah Rutul Jummah | 1402017007 
+                    </div>
+                    <div class="credits"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <!-- <script type="text/javascript">
+        function hitungBola() {
+            var r = document.getElementById('r').value;
+            var lpBola = 4 * Math.PI  r * r;
+            var vBola = 4/3 * Math.PI * r * r * r;
+
+            document.getElementById('luas').innerHTML = "Luas Permukaan Bola = " + lpBola.toFixed(2);
+            document.getElementById('volume').innerHTML = "Volume Bola = " + vBola.toFixed(2);
+        }
+    </script> -->
+</html>
