@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>3D Calculator</title>
+
+        <!-- CSS -->
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <script src="js/function.js"></script>  
+    </head>
+
+    <body>
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <div class="container-fluid align-items-center">
+                <a href="#" class="navbar-brand">3D Calculator</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="silinder.html">Silinder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kerucut.html">Kerucut</a></li>
+                        <li class="nav-item"><a class="nav-link" href="bola.html">Bola</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SLIDER -->
+        <div id="slides" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                <li data-target="#slides" data-slide-to="1"></li>
+                <li data-target="#slides" data-slide-to="2"></li>
+                <li data-target="#slides" data-slide-to="3"></li>
+            </ul>
+
+            <div class="carousel-inner">
+                <!-- HOME -->
+                <div class="carousel-item active">
+                    <img src="image/background.png">
+                    <div class="carousel-caption">
+                        <!-- INPUT NAMA -->
+                        <script type="text/javascript">
+                            debugger;
+                            var name; var date = new Date(); var time = date.getHours();
+                            name = window.prompt("Silahkan Isi Namamu Di Bawah Ini!");
+                            /** KONDISI WAKTU **/
+                            if(time>0 && time<=11){
+                                document.write("<h1> Selamat Pagi, " + name + "</h1>");
+                            } else if (time>11 && time<=14){
+                                document.write("<h1> Selamat Siang, " + name + "</h1>");
+                            } else if (time>14 && time<=18){
+                                document.write("<h1> Selamat Sore, " + name + "</h1>");
+                            } else if (time>18 && time<=24){
+                                document.write("<h1> Selamat Malam, " + name + "</h1>");
+                            } 
+                        </script>
+                        <br>
+                        <h3>Ayo Kita Hitung Luas Permukaan dan Volume Bangun Ruang <br> Dengan Lebih Mudah dan Menyenangkan</h3>
+                    </div>
+                </div>
+
+                <!-- SLIDER 1: SILINDER -->
+                <div class="carousel-item" id="silinder">
+                    <img src="image/background1.png">
+                    <div class="carousel-caption">
+                        <h1 class="display-2"><strong>SILINDER</strong></h1>
+                        <h3>Menghitung Luas Permukaan dan Volume SILINDER</h3>
+                        <!-- <a href="silinder.html" class="btn btn-outline-light btn-lg" role="button">HITUNG</a> -->
+                        <button type="button" class="btn btn-outline-light btn-lg" onclick="btnSilinder()">HITUNG</button>
+                    </div>
+                </div>
+
+                <!-- SLIDER 2: KERUCUT -->
+                <div class="carousel-item">
+                    <img src="image/background2.png" id="kerucut">
+                    <div class="carousel-caption">
+                        <h1 class="display-2"><strong>KERUCUT</strong></h1>
+                        <h3>Menghitung Luas Permukaan dan Volume Kerucut</h3>
+                        <button type="button" class="btn btn-outline-light btn-lg" onclick="btnKerucut()">HITUNG</button>
+                    </div>
+                </div>
+
+                <!-- SLIDER 3: BOLA -->
+                <div class="carousel-item">
+                    <img src="image/background3.png" id="bola">
+                    <div class="carousel-caption">
+                        <h1 class="display-2"><strong>BOLA</strong></h1>
+                        <h3>Menghitung Luas Permukaan dan Volume Bola</h3>
+                        <button type="button" class="btn btn-outline-light btn-lg" onclick="btnBola()">HITUNG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JUMBOTRON -->
+        <div class="container-fluid">
+            <div class="row jumbotron">
+                <dv class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                    <h4 class="lead">Sebuah kalkulator berbasis web yang digunakan
+                        untuk menghitung luas permukaan dan volume bangun ruang, seperti 
+                        silinder, kerucut, dan bola.
+                    </h4>
+                </dv>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container-fluid padding">
+                <div class="row text-center">
+                    <div class="copyright md-4">
+                        &copy; Copyright <strong><span>3D Calculator</span></strong>
+                        <br> By Aisyah Rutul Jummah | 1402017007
+                    </div>
+                    <div class="credits"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
